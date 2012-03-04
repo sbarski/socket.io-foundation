@@ -1,11 +1,12 @@
 <html>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
 <script type="text/css" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css"></script>
 
 <script src="http://localhost:8080/socket.io/socket.io.js"></script>
 <script>
 	$(document).ready(function() {
+		console.log('init socket.io-foundation')
 	});
 
 	var socket = io.connect('http://localhost:8080');
