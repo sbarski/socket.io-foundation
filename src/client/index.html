@@ -4,20 +4,34 @@
 <script type="text/css" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css"></script>
 
 <script src="http://localhost:8080/socket.io/socket.io.js"></script>
-<script>
-	$(document).ready(function() {
-		console.log('init socket.io-foundation')
-	});
-
-	var socket = io.connect('http://localhost:8080');
-	  socket.on('news', function (data) {
-	    console.log(data);
-	    socket.emit('my other event', { my: 'data' });
-	});
-</script>
+<script src="scripts/script.js"></script>
+<style>
+	#output {
+		background: #000;
+		color: green;
+		font-size: 12px;
+		font-family: "Monaco","Courier New", "monospace";
+		width: 300px;
+		height: 150px;
+		padding: 1px;
+		margin: 10px 0 0 0;
+			box-sizing: border-box;
+	}
+	#output div {
+		margin: 6px;
+	}
+</style>
 
 <body>
 
+	<button>Curve ball</button>
+	<button>Slow ball</button>
+	<button>Fast ball</button>
+	<button>Slider</button>
+
+	<div id="output">
+
+	</div>
 </body>
 
 </html>
