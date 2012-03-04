@@ -1,0 +1,22 @@
+<html>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/css" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css"></script>
+
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script>
+	$(document).ready(function() {
+	});
+
+	var socket = io.connect('http://localhost:8080');
+	  socket.on('news', function (data) {
+	    console.log(data);
+	    socket.emit('my other event', { my: 'data' });
+	});
+</script>
+
+<body>
+
+</body>
+
+</html>
